@@ -1,25 +1,54 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.abc</groupId>
-  <artifactId>demo</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+ recon-ng
+-----------------
+1.recon-ng
+2.marketplace install netcraft
+ >modules load path
+ >options set source google.com
+ >run
+4.marketplace install hackertarget
+5.marketplace install whois_pocs
+3.marketplace install resolve
 
-  <name>demo</name>
-  <url>http://maven.apache.org</url>
+netdiscover
+----------------
+>netdiscover
+>netdiscover -r ipaddress/range
+>netdiscover -i eth0
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+Dmitry
+-------------
+>dmitry
+>dmitry -s becbapatla.ac.in
+>dmitry -i becbapatla.ac.in
+>dmitry -w becbapatla.ac.in
+>dmitry -winesepo bapatla.txt becbapatla.ac.in
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-</project>
+Nmap
+---------
+>nmap google.com
+>nmap -O <ipaddress>
+>namp -F <ipaddress>
+>nmap -sP <ipaddress>
+>nmap -PN <ipaddress>
+>nmap -p 80 <ipaddress>
+>nmap -p- <ipaddress>
+
+
+IPTABLES
+-------------
+>iptables -L
+>host -t a gmail.com
+>whois <ipaddress> | grep CIDR
+>iptables -A OUTPUT -d <ipaddress> -j DROP
+>iptables -A INPUT -d <ipaddress> -j DROP
+>iptables -L
+>iptables -A INPUT -p icmp -j DROP
+>iptables -D INPUT -p icmp -j DROP
+>iptables -A INPUT -p tcp -j DROP
+
+Snort
+-----------------
+>snort -v
+>snort -l ./Desktop
+>snort -r ./Desktop/snort.log 23622134
